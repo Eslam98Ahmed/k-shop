@@ -1,0 +1,44 @@
+/* first nav-bar  */
+.btn-card {
+    width: 162px;
+    height: 40px;
+    color: #302ca2;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 1rem;
+    font-style: normal;
+}
+.btn-profile {
+    width: 40px;
+    height: 40px;
+    color: #302ca2;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 0.75rem;
+    font-style: normal;
+}
+.Search-inp {
+    direction: rtl;
+    background-color: #EAEAEA;
+    border: transparent 1px solid;
+    border-radius: 10px;
+}
+
+/* second nav-bar  */
+.second-nav {
+    background-color: #EAEAEA;
+}
+.nav-item a {
+    color: #302ca2 !important;
+}
+.nav-item .active {
+    color: #302ca2 !important;
+    font-weight: 700;
+}
+
+/* responsive btn  */
+@media screen and (max-width: 770px) {
+    .btn-card {
+        font-size: 0.5rem;
+    }
+}
