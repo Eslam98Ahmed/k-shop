@@ -6,9 +6,15 @@
     color: #302ca2;
     border: 1px solid #302ca2 ;
     border-radius: 5px;
+    font-size: 16px;
+}
+.prod-title{
+    color: #032326 ;
+    font-size: 24px;
 }
 .head-title{
     color: #032326 ;
+    font-size: 18px;
 }
 .head-btn:hover{
     background-color: #302ca2;
@@ -50,13 +56,13 @@
      right: 7px;
 }
 .title{
-    font-size: 16px;
+    font-size: 18px;
     color: #032326;
 }
 .price{
     color: #23104e;
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-weight:900  ;
+    font-size: 1rem;
 }
 .add-card{
 color: white;
