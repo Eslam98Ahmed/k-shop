@@ -1,0 +1,24 @@
+.not-found{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 900;
+}
+.btn-danger{
+    color: #302ca2 !important;
+    border-radius: 10px;
+    background-color: #EAEAEA;   
+    border: solid 1px transparent;
+    font-size: 1rem !important;
+}
+.btn-danger:hover{
+    color:#EAEAEA !important;
+    background-color: #302ca2 !important;   
+}
+.not-found img{
+    width: 400px;
+}

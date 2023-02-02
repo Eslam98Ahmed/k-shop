@@ -23,6 +23,24 @@
     border: transparent 1px solid;
     border-radius: 10px;
 }
+.cart{
+    position: relative;
+}
+.cart-count{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    /* border: 1px solid #302ca2 ; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.5rem;
+    position: absolute;
+    top: 45%;
+    left: 18%;
+}
 
 /* second nav-bar  */
 .second-nav {

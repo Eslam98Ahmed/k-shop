@@ -1,22 +1,24 @@
+<app-slider></app-slider>
 <div class="products py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-9">
-                        <div class="head d-flex justify-content-between">
-                            <button class="head-btn px-3">عرض الكل</button>
-                            <h4 class="prod-title">وصل حديثا</h4>
+                    <div class="col-md-10">
+                        <div class="head d-flex justify-content-end">
+                            <h4 class="prod-title">المنتجات</h4>
                         </div>
                         <div class="row pt-1">
                             <!-- first product  -->
-                            <div class="col-md-3 mt-1">
+                            <div class="col-md-3 mt-4" *ngFor="let product of allProducts">
                                 <div class="product-box py-2 px-3">
-                                    <div class="product-img">
-                                        <img src="assets/prod1.png" class="w-100">
-                                    </div>
+                                    <a [routerLink]="['/product'  ,product.id]">
+                                        <div class="product-img">
+                                            <img [src]="product.image">
+                                        </div>
+                                    </a>
                                     <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
+                                        <h6 class="title pt-2">{{product.title}}</h6>
                                         <div class="rate d-flex pt-2">
                                             <img src="assets/empty-rate.svg">
                                             <img src="assets/empty-rate.svg">
@@ -24,197 +26,34 @@
                                             <img src="assets/fill-rate.svg">
                                             <img src="assets/fill-rate.svg">
                                         </div>
-                                        <p class="price pt-2">90.00 ج.م</p>
+                                        <p class="price pt-2">{{product.price}} ج.م</p>
                                         <div class="action d-flex justify-content-between w-100">
                                             <div class="d-flex">
                                                 <img src="assets/fav.svg" class="action-btn pe-1">
                                                 <img src="assets/share.svg" class="action-btn ps-1">
                                             </div>
-                                            <button class="add-card ps-3 py-1"><i class="fa-solid fa-cart-plus"></i> أضف
-                                                للسلة</button>
-                                        </div>
-                                    </div>
-                                    <div class="offer">
-                                        <p class="pt-1">جديد</p>
-                                    </div>
-                                    <div class="compare">
-                                        <img src="assets/compare_arrows.png" >
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- second product -->
-                            <div class="col-md-3 mt-1">
-                                <div class="product-box py-2 px-3">
-                                    <div class="product-img">
-                                        <img src="assets/prod2.png" class="w-100">
-                                    </div>
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <div class="rate d-flex pt-2">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                        </div>
-                                        <p class="price pt-2">90.00 ج.م</p>
-                                        <div class="action d-flex justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <button class="add-card ps-3 py-1"><i class="fa-solid fa-cart-plus"></i> أضف
-                                                للسلة</button>
-                                        </div>
-                                    </div>
-                                    <div class="offer">
-                                        <p class="pt-1">جديد</p>
-                                    </div>
-                                    <div class="compare">
-                                        <img src="assets/compare_arrows.png" >
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- third product -->
-                            <div class="col-md-3 mt-1">
-                                <div class="product-box py-2 px-3">
-                                    <div class="product-img">
-                                        <img src="assets/prod3.png" class="w-100">
-                                    </div>
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <div class="rate d-flex pt-2">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                        </div>
-                                        <p class="price pt-2">90.00 ج.م</p>
-                                        <div class="action d-flex justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <button class="add-card ps-3 py-1"><i class="fa-solid fa-cart-plus"></i> أضف
-                                                للسلة</button>
-                                        </div>
-                                    </div>
-                                    <div class="offer">
-                                        <p class="pt-1">جديد</p>
-                                    </div>
-                                    <div class="compare">
-                                        <img src="assets/compare_arrows.png" >
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Fourth product -->
-                            <div class="col-md-3 mt-1">
-                                <div class="product-box py-2 px-3">
-                                    <div class="product-img">
-                                        <img src="assets/prod4.png" class="w-100">
-                                    </div>
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <div class="rate d-flex pt-2">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/empty-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                            <img src="assets/fill-rate.svg">
-                                        </div>
-                                        <p class="price pt-2">90.00 ج.م</p>
-                                        <div class="action d-flex justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <button class="add-card ps-3 py-1"><i class="fa-solid fa-cart-plus"></i> أضف
+                                            <button class="add-card ps-3 py-1" (click)="addToCart(product)"><i
+                                                    class="fa-solid fa-cart-plus"></i> أضف
                                                 للسلة</button>
                                         </div>
                                     </div>
                                     <div class="offer-pro">
-                                        <p class="pt-1">عرض</p>
+                                        <p class="pt-1">{{product.rating.rate}}</p>
                                     </div>
-                                    <div class="compare">
+                                    <!-- <div class="compare">
                                         <img src="assets/compare_arrows.png" >
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="d-flex justify-content-end pt-2">
-                            <h6 class="head-title">منتجات تصفحتها مؤخرا</h6>
+                    <div class="col-md-2">
+                        <div class="d-flex justify-content-end">
+                            <h6 class="prod-title">الفئات</h6>
                         </div>
-                        <!-- first product  -->
-                        <div class="product-box ps-2 mt-2">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <p class="price pt-1 pe-1">90.00 ج.م</p>
-                                        <div class="action d-flex pt-2 justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <a class="add-basket pe-1"><i class="fa-solid fa-cart-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 prod-img">
-                                    <img src="assets/prod5.png">
-                                    <div class="offer">
-                                        <p class="pt-1">جديد</p>
-                                    </div>                                 
-                                </div>
-                            </div>
-                        </div>
-                        <!-- second product -->
-                        <div class="product-box ps-2 mt-2">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <p class="price pt-1 pe-1">90.00 ج.م</p>
-                                        <div class="action d-flex pt-2 justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <a class="add-basket pe-1"><i class="fa-solid fa-cart-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 prod-img">
-                                    <img src="assets/prod6.png">
-                                    <div class="offer-pro">
-                                        <p class="pt-1">عرض</p>
-                                    </div>                                   
-                                </div>
-                            </div>
-                        </div>
-                        <!-- third product -->
-                        <div class="product-box ps-2 mt-2">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="product-caption pt-2 d-flex flex-column align-items-end">
-                                        <h6 class="title pt-2">تيشيرت-كم طويل-آرت وير-نسائي-ملابس</h6>
-                                        <p class="price pt-1 pe-1">90.00 ج.م</p>
-                                        <div class="action d-flex pt-2 justify-content-between w-100">
-                                            <div class="d-flex">
-                                                <img src="assets/fav.svg" class="action-btn pe-1">
-                                                <img src="assets/share.svg" class="action-btn ps-1">
-                                            </div>
-                                            <a class="add-basket pe-1"><i class="fa-solid fa-cart-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 prod-img">
-                                    <img src="assets/prod5.png">
-                                </div>
-                            </div>
+                        <div class="categories pt-4 text-end">
+                            <h6 class="pt-2" *ngFor="let category of categories"><a href="">{{category | uppercase}}</a>
+                            </h6>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,32 @@
+.title {
+    font-weight: bold;
+}
+
+.price{
+    color: #302ca2;
+}
+
+.details{
+    font-size: 0.9rem ;
+    color: #302ca2 !important;
+} 
+
+ul {
+    list-style: none;
+}
+.add-btn{
+    background-color: #302ca2;
+    color: white;
+    border: 1px solid #302ca2 ;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.add-btn:hover{
+    background-color: transparent;
+    color: #302ca2;
+}
+.action-bttn{
+    display: flex;
+    margin-right: 15%;
+    justify-content: end;
+}

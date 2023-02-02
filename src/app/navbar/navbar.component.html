@@ -2,7 +2,12 @@
 <nav class="navbar bg-white py-3">
     <div class="container-fluid w-100">
         <div class="d-flex justify-content-between w-100" role="search">
-            <button class="btn btn-card me-3"> <i class="fa-sharp fa-solid fa-cart-shopping me-2"></i>سلة التسوق</button>
+          <div class="cart">
+            <button class="btn btn-card me-3" routerLink="/cart"> <i class="fa-sharp fa-solid fa-cart-shopping me-2"></i>سلة التسوق</button>
+            <div class="cart-count">
+              <p>{{ProductsService.cartCount}}</p>
+            </div>
+          </div>
             <button class="btn btn-profile me-3"><i class="fa-solid fa-user"></i></button>
             <input class="form-control Search-inp me-2 w-75" type="search" placeholder="عم تبحث ؟">
             <img src="../../assets/Path 224.svg" class="navbar-brand mx-auto"/>
@@ -25,18 +30,17 @@
                 <a class="nav-link" href="#">تواصل معانا</a>
               </li>
               <li class="nav-item pe-3">
-                <a class="nav-link" href="#">قائمة الامنيات</a>
+                <a class="nav-link" routerLink="/products">المنتجات</a>
               </li>
               <li class="nav-item pe-3">
-                <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                <a class="nav-link active" aria-current="page" routerLink="/home">الرئيسية</a>
               </li>
             <li class="nav-item dropdown pe-3">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 الأقسام
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">هواتف</a></li>
-                <li><a class="dropdown-item" href="#">ملابس</a></li>
+                <li *ngFor="let category of categories"><a class="dropdown-item" href="">{{category}}</a></li>
               </ul>
             </li>
           </ul>

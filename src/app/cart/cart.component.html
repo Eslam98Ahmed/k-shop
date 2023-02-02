@@ -1,0 +1,43 @@
+<div class="cart pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="table-body pt-5" *ngIf="cartDetails.length != 0">
+                <table class="table mb-2">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="py-2" *ngFor="let product of cartDetails ; let i = index">
+                            <td class="prod-details">
+                                <div class="d-flex w-75">
+                                    <img [src]="product.image" class="prod-img me-2">
+                                    <p class="text-muted">{{product.title}}</p>
+                                </div>
+                            </td>
+                            <td>{{product.price}}</td>
+                            <td>1</td>
+                            <td>{{product.price}}</td>
+                            <td class="close" (click)="deleteItem(i)"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="palce-order d-flex justify-content-end text-start my-5">
+                    <div class="order-body py-2 px-3 text-center">
+                        <p>قم بأكمال الطلب و استخدم كوبونات الخصومات و استمتع بالعروض</p>
+                        <button class="add-card px-4 py-2 mt-2">أكمال الطلب</button>
+                    </div>
+                </div>
+            </div>
+            <div class="empaty-cart" *ngIf="cartDetails.length == 0">
+                <img src="assets/empty.jpg" class="w-50">
+                <h4 class="pt-3">سلة المشتريات فارغه</h4>
+            </div>
+        </div>
+    </div>
+</div>

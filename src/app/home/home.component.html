@@ -1,0 +1,122 @@
+<!-- header section -->
+<div class="header">
+    <div class="layout">
+        <div class="container">
+            <div class="row">
+                <div class="header-contant">
+                    <h1 class="header-title pb-4">أقوي العروض و المنتجات من خلالنا</h1>
+                    <p class="pb-4">أحصل علي خصومات علي الملابس الشتوية خلال الاشهر من نوفمبر الي مارس من عدة توكيلات
+                    </p>
+                    <div class="bttns">
+                        <button class="about py-3 px-5 ms-3">من نحن</button>
+                        <button routerLink="/products" class="shop py-3 px-5 ms-3">تسوق الان</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- products section  -->
+<div class="products py-5 my-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="prod-head d-flex justify-content-between">
+                    <button class="head-btn px-3" routerLink="/products">عرض الكل</button>
+                    <h4 class="prod-title">المنتجات</h4>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-3 mt-4" *ngFor="let product of productsLimit">
+                        <div class="product-box py-2 px-3">
+                            <a [routerLink]="['/product'  ,product.id]">
+                                <div class="product-img">
+                                    <img [src]="product.image">
+                                </div>
+                            </a>
+                            <div class="product-caption pt-2 d-flex flex-column align-items-end">
+                                <h6 class="title pt-2">{{product.title}}</h6>
+                                <div class="rate d-flex pt-2">
+                                    <img src="assets/empty-rate.svg">
+                                    <img src="assets/empty-rate.svg">
+                                    <img src="assets/empty-rate.svg">
+                                    <img src="assets/fill-rate.svg">
+                                    <img src="assets/fill-rate.svg">
+                                </div>
+                                <p class="price pt-2">{{product.price}} ج.م</p>
+                                <div class="action d-flex justify-content-between w-100">
+                                    <div class="d-flex">
+                                        <img src="assets/fav.svg" class="action-btn pe-1">
+                                        <img src="assets/share.svg" class="action-btn ps-1">
+                                    </div>
+                                    <button class="add-card ps-3 py-1" (click)="addToCart(product)"><i
+                                            class="fa-solid fa-cart-plus"></i> أضف
+                                        للسلة</button>
+                                </div>
+                            </div>
+                            <div class="offer-pro">
+                                <p class="pt-1">{{product.rating.rate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- testimonial secton  -->
+<div class="testimonail my-5"> 
+    <div class="testimonail-layout py-4">
+        <div class="container">
+            <div class="row">
+                <div class="client-head d-flex justify-content-end pt-5">
+                    <h1>أراء العملاء</h1>
+                </div>
+                <div class="col-md-12">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="bttn active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2" class="bttn"></button>
+                        </div>
+                        <div class="carousel-inner pt-3 mt-3">
+                            <div class="carousel-item active pb-5 mb-5 text-center" data-bs-interval="20000">
+                                <img src="../../assets/client1.jpg" class="d-block w-25 m-auto img-client">
+                                <h5 class=" fs-3 mt-4">عالياء محمود راشد</h5>
+                                <p class=" fs-5 mt-3 lead">  أنا أحب هذا الموقع تمامًا..أنا فقط أطلبه مباشرة من خلالهم ... أنا دائمًا مكمل لملابسي وسأعود للمزيد ... شكرًا لك على امتلاك ملابس عصرية لطيفة تناسبها وتبدو جيدة .</p>
+                            </div>
+
+                            <div class="carousel-item  pb-5 mb-5 text-center " data-bs-interval="20000">
+                                <img src="../../assets/client2.jpg" class="d-block m-auto img-client">
+                                <h5 class=" fs-3 mt-4">خالد الحسن علي </h5>
+                                <p class=" fs-5 mt-3 lead">
+                                    لقد تلقيت للتو طلبي الذي قدمته منذ 3 أيام. الشحن كان مذهلا !! ثم الملابس ... إنه أمر مخيف أن تطلب الملابس عبر الإنترنت. كنت قلقة بشأن الملاءمة. كل شيء مناسب بشكل رائع وأنا على استعداد لتقديم طلب آخر !! أوصي بهذا الموقع للجميع </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- brands section  -->
+<div class="brands py-5 text-end my-5">
+    <div class="container">
+        <div class="row">
+            <h2>العلامات التجارية</h2>
+            <div class="col-md-12 ps-5 pt-5">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let slide of slides">
+                        <ng-template carouselSlide>
+                            <img [src]="slide.img" class="w-50 h-50">
+                        </ng-template>
+                    </ng-container>             
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

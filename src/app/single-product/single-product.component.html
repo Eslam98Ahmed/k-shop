@@ -1,0 +1,31 @@
+<div class="product py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img [src]="productData?.image" class="w-75">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="title">{{productData?.title}}</h2>
+                        <h4 class="price pt-2">{{productData?.price}} ج.م</h4>
+                        <p class="text-muted pt-3">{{productData?.description}}</p>
+                        <div class="pt-4">
+                            <ul>
+                                <li>Category : <span class="details">{{productData?.category}}</span></li>
+                                <li class="pt-2">Rating : <span class="details">{{productData?.rating?.rate}}</span>
+                                </li>
+                                <li class="pt-2">In Stoke : <span class="details">{{productData?.rating?.count}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="action-bttn">
+                            <button class="add-btn py-2 px-4" (click)="addToCart(productData)"><i
+                                    class="fa-solid fa-cart-plus pe-1"></i> أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

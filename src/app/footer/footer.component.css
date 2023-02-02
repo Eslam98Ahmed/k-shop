@@ -1,0 +1,16 @@
+footer{
+   width: 100%;
+   color: white;
+   background-color: #031431;
+}
+.footer-contant a {
+   text-decoration: none;
+   color: white;
+}
+.social{
+   font-size: 1.3rem;
+   cursor: pointer;
+}
+.container{
+   border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+}
